@@ -41,27 +41,31 @@
 
 \begin{frontmatter}
 
-\title{Elsevier \LaTeX\ template\tnoteref{mytitlenote}}
+\title{Multi-SpaM: a Maximum-Likelihood approach to Phylogeny Reconstruction based on Multiple Spaced-Word Matches}
 \tnotetext[mytitlenote]{Fully documented templates are available in the elsarticle package on \href{http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle}{CTAN}.}
 
 %% Group authors per affiliation:
-\author{Elsevier\fnref{myfootnote}}
-\address{Radarweg 29, Amsterdam}
+\author{Md. Nazmul Hasan }
+\ead{0419052003}
+\ead{nazmulcse25@gmail.com}
 \fntext[myfootnote]{Since 1880.}
 
 %% or include affiliations in footnotes:
-\author[mymainaddress,mysecondaryaddress]{Elsevier Inc}
-\ead[url]{www.elsevier.com}
-
-\author[mysecondaryaddress]{Global Customer Service\corref{mycorrespondingauthor}}
-\cortext[mycorrespondingauthor]{Corresponding author}
-\ead{support@elsevier.com}
-
-\address[mymainaddress]{1600 John F Kennedy Boulevard, Philadelphia}
-\address[mysecondaryaddress]{360 Park Avenue South, New York}
+\author{Arefin Rahman Niloy}
+\ead{108052108}
+\ead{arefinniloy@gmail.com}
 
 \begin{abstract}
-This template helps you to create a properly formatted \LaTeX\ manuscript.
+Word-based or ‘alignment-free’ methods for phylogeny reconstruction are much faster than traditional approaches, but they are generally less accurate. Most of these methods calculate
+pairwise distances for a set of input sequences, for example from word
+frequencies, from so-called spaced-word matches or from the average
+length of common substrings. In this paper, we propose the first word-based approach
+to tree reconstruction that is based on multiple sequence comparison
+and Maximum Likelihood. Our algorithm first samples small, gap-free
+alignments involving four taxa each. For each of these alignments, it 
+ then calculates a quartet tree and, finally, the program Quartet MaxCut is used to infer a super tree topology for the full set of input taxa
+from the calculated quartet trees. Experimental results show that
+trees calculated with our approach are of high quality.
 \end{abstract}
 
 \begin{keyword}
@@ -75,7 +79,19 @@ This template helps you to create a properly formatted \LaTeX\ manuscript.
 
 \section{The Elsevier article class}
 
-\paragraph{Installation} If the document class \emph{elsarticle} is not available on your computer, you can download and install the system package \emph{texlive-publishers} (Linux) or install the \LaTeX\ package \emph{elsarticle} using the package manager of your \TeX\ installation, which is typically \TeX\ Live or Mik\TeX.
+\paragraph{} To gain a better understanding of the evolution of genes or species, reconstructing accurate phylogenetic trees is essential. This can be done using
+standard methods which rely on sequence alignments, either of entire genomes
+or of sets of orthologous genes or proteins. Character-based methods such as
+Maximum Parsimony [14, 20] or Maximum Likelihood [15] infer trees based
+on evolutionary substitution events that may have happened since the species
+evolved from a common ancestor. These methods are generally considered to
+be accurate, as long as the underlying alignments are of high quality, and as
+long as suitable substitution models are used. However, for the task of multiple alignment no exact polynomial-time algorithm exists, and even heuristic
+approaches can be time consuming [46]. Moreover, the most popular heuristic for multiple alignment, the progressive alignment [19], has been shown to
+be relatively unstable: multiple alignments calculated with progressive approaches and trees inferred from these alignments depend on the underlying
+guide trees and even on the order of the input sequences [9]. In addition to
+these difficulties, exact algorithms for character-based phylogeny approaches
+are themselves NP hard [11, 21].
 
 \paragraph{Usage} Once the package is properly installed, you can use the document class \emph{elsarticle} to create a manuscript. Please make sure that your manuscript follows the guidelines in the Guide for Authors of the relevant journal. It is not necessary to typeset your manuscript in exactly the same way as an article, unless you are submitting to a camera-ready copy (CRC) journal.
 
